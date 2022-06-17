@@ -1,0 +1,40 @@
+.header{
+    font-size: medium;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.imgadmin{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+
+.btn{
+    margin-left:10px;
+}
+
+.card-top{
+    position: relative;
+    display:flex;
+    padding-top: 0%;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: rgb(218, 15, 15);
+    background-clip: border-box;
+    border:1px solid rgba(16, 161, 187, 0);
+    border-radius: .25rem;
+}
+
+.item{
+    margin: 0px 15px;
+    text-align: center;
+}
+.aclass:hover{
+    color: yellowgreen;
+}
+
+.aclass{
+    color: black;
+}

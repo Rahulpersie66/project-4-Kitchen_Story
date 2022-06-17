@@ -1,0 +1,55 @@
+<div class="container-fluid exapnd-md" >
+
+    <div class="container d-flex">
+        <div class="item">
+            <a class="aclass" routerLink="/addProduct">
+                <i class="fa fa-plus"></i>
+                <h6>Add the product</h6>
+            </a>
+        </div>
+    
+        <div class="item">
+            <a class="aclass" routerLink="/adminViewUpdateProduct">
+                <i class="fa fa-eye"></i>
+                <h6>View/Update all the products</h6>
+            </a>
+        </div> 
+
+        <div class="item">
+            <a class="aclass" routerLink="/allUser">
+                <i class="fa fa-wrench"></i>
+                <h6>Change Password</h6>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <h2>User List of Kitchen story</h2>
+
+    <table class="table table-stripped">
+        <thead class="header"><tr>
+            <td>Username</td>
+            <td>Password</td>
+            <td>Full Name</td>
+            <td>Address</td>
+            <td>Action:</td>
+        </tr></thead>
+        <tbody *ngFor="let user of allUser ">
+            <tr *ngIf="user.type==='Admin'">
+                
+                <td><b>{{user.email}}</b></td>
+                <td>{{user.password}}</td>
+                <td>{{user.fullName}}</td>
+                <td>{{user.address}}</td>
+                <td >
+                    <button (click)="viewUser(user.id)" class="btn btn-success"><i class="fa fa-info-circle "></i></button>
+                    <button (click)="updatePassword(user.id)"class="btn btn-outline-danger"><i class="fa fa-pencil-square-o"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+       
+        
+    
+
+</div>

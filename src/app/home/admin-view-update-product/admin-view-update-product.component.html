@@ -1,0 +1,57 @@
+
+
+<div class="container-fluid exapnd-md" >
+
+    <div class="container d-flex">
+        <div class="item">
+            <a class="aclass" routerLink="/addProduct">
+                <i class="fa fa-plus"></i>
+                <h6>Add the product</h6>
+            </a>
+        </div>
+    
+        <div class="item">
+            <a class="aclass" routerLink="/adminViewUpdateProduct">
+                <i class="fa fa-eye"></i>
+                <h6>View/Update all the products</h6>
+            </a>
+        </div> 
+
+        <div class="item">
+            <a class="aclass" routerLink="/allUser">
+                <i class="fa fa-wrench"></i>
+                <h6>Change Password</h6>
+            </a>
+        </div> 
+
+    </div>
+    <h2>Product List of Kitchen story</h2>
+
+    <table class="table table-stripped">
+        <thead class="header"><tr>
+            <td>Image</td>
+            <td>Product name:</td>
+            <td>Vendor name:</td>
+            <td>Price:</td>
+            <td>Action:</td>
+        </tr></thead>
+        <tbody>
+            <tr *ngFor="let pro of allProducts">
+                <td><img class="imgadmin" src={{pro.imgUrl}}></td>
+                <td>{{pro.prodName}}</td>
+                <td>{{pro.vendorName}}</td>
+                <td><b>{{pro.price}}</b></td>
+                <td >
+                    <button (click)="viewProduct(pro.prodId)" class="btn btn-success"><i class="fa fa-info-circle "></i></button>
+                    <button (click)="updateProduct(pro.prodId)"class="btn btn-warning"><i class="fa fa-pencil-square-o"></i></button>
+                    <button (click)="deleteProduct(pro.prodId)" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+       
+        
+    
+
+</div>

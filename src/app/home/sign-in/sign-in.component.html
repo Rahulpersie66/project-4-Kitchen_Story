@@ -1,0 +1,37 @@
+
+<br><p>sign-in works!</p>
+<div class="container p-5"  style="width:400px" style="margin:0" style="background-color:#66ffff">
+    <h2 style="text-align:center">LogIN the KitchenHouse</h2>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" style="text-align:center">
+   <table style="margin-left: auto;  
+   margin-right: auto;  "><tr><b><td>
+    Email:</td></b><td><input type="email" name="email" [(ngModel)] = "user.email" 
+    #email = "ngModel" required>
+    <div class="text-danger" *ngIf = "loginForm.submitted && email.invalid">
+        <p *ngIf = "loginForm.controls['email'].errors?.['required']">
+            Email is required</p>
+    </div></td>
+</tr><tr><td><b>
+    Password:</b></td><td><input type="password" name="password" [(ngModel)] = "user.password" 
+    #password = "ngModel" required>
+    <div class="text-danger" *ngIf = "loginForm.submitted && password.invalid">
+        <p *ngIf = "loginForm.controls['password'].errors?.['required']">
+            password is required</p>
+    </div></td>
+</tr><tr>
+    <td>
+    <button class="btn btn-primary" type="submit">SignIn</button></td><td>
+    <a routerLink="/register">New User</a></td>
+</tr>
+</table>
+
+</form>
+
+<!-- <table>
+    <thead><tr><th>username</th></tr></thead>
+    <tbody><tr *ngFor ="let us of allUser"><td>{{us.email}}</td> <td>{{us.type}}
+    </td></tr>
+    </tbody>
+</table> -->
+
+</div>

@@ -1,0 +1,30 @@
+.card-top{
+    position: relative;
+    display:flex;
+    padding-top: 0%;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #fff;
+    background-clip: border-box;
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius: .25rem;
+}
+
+.item{
+    margin: 0px 15px;
+    text-align: center;
+}
+.aclass:hover{
+    color: yellowgreen;
+}
+
+.aclass{
+    color: black;
+}
+
+.imgView{
+    width: 200px;
+    height:200px;
+    border-radius: 300%;
+}

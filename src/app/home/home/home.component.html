@@ -1,0 +1,65 @@
+
+<div class="container-fluid">
+
+    <!-- card top --dashboard -->
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+
+        <div class="item">
+            <a class="aclass" (click)="filter('')" >
+                <img src="../../../assets/all.jpg">
+                <h6>All items</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a class="aclass" (click)="filter('fruit')" >
+                <img src="../../../assets/fruit.jpg">
+                <h6>Fruits</h6>
+            </a>
+        </div>
+    
+        <div class="item">
+            <a class="aclass" (click)="filter('veg')">
+                <img src="../../../assets/vege.jpg">
+                <h6>Vegetable</h6>
+            </a>
+        </div>
+    
+        <div class="item">
+            <a class="aclass" (click)="filter('juice')">
+                <img src="../../../assets/juice.jpg">
+                <h6>Juice</h6>
+            </a>
+        </div>
+    </div>
+</div>
+    
+            <div class="container-fluid" >
+                <div class="row my-3 ">
+                    <div  class="card-down col-lg-3 col-md-4 col-sm-6 border border-3  bg-dark text-white " 
+                     *ngFor="let pro of filterCategory | pipe : searchKey : 'prodName' ">
+                         
+                    <img src="{{pro.imgUrl}}" routerLink="/">
+                     <!-- Text inside  -->
+                        <h1><b> {{pro.prodName}}</b><br></h1>
+                            <p><i>{{pro.vendorName}}</i><br>
+                            ₹{{pro.price}}/-<br>
+                            {{pro.prodDetail}}</p><br>
+                     <!-- Nutton of the card -->
+                            <button class="btn btn-warning m-1 "  (click)="addToCart(pro)"><b>Add to cart</b></button>
+                             <br>
+    
+                    <div>
+                    
+                 
+                </div>
+    
+            </div>
+    
+    <!--     <div *ngElse class="col-lg-3 col-md-4 col-sm-6  bg-dark text-white ">Column 2</div>
+            <div class="col-lg-3 col-md-4 col-sm-6  bg-primary ">Column 3</div>
+            <div class="col-lg-3 col-md-4 col-sm-6  bg-dark text-white">Column 4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6  bg-primary ">Column 5</div>
+            <div class="col-lg-3 col-md-4 col-sm-6  bg-dark text-white ">Column 6</div> -->
+
+</div>

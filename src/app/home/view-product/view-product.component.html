@@ -1,0 +1,59 @@
+
+<div class="container-fluid exapnd-md" >
+
+    <div class="container d-flex">
+        <div class="item">
+            <a class="aclass" routerLink="/addProduct">
+                <i class="fa fa-plus"></i>
+                <h6>Add the product</h6>
+            </a>
+        </div>
+    
+        <div class="item">
+            <a class="aclass" routerLink="/adminViewUpdateProduct">
+                <i class="fa fa-eye"></i>
+                <h6>View/Update all the products</h6>
+            </a>
+        </div> 
+
+        <div class="item">
+            <a class="aclass" routerLink="/allUser">
+                <i class="fa fa-wrench"></i>
+                <h6>Change Password</h6>
+            </a>
+        </div> 
+
+    </div>
+
+    <p>View the product with specific Id</p>
+    <table class="table ">
+        <tr>
+            <td><b>Product id:</b></td>
+            <td>{{product.prodId}}</td>
+        </tr><tr>    
+            <td><b>Product name:</b></td>
+            <td>{{product.prodName}}</td>
+        </tr><tr>
+            <td><b>Vendor Name:</b></td>
+            <td>{{product.vendorName}}</td>
+        </tr><tr>
+            <td><b>Product Details:</b></td>
+            <td>{{product.prodDetail}}</td>
+        </tr><tr>
+            <td><b>Price:</b></td>
+            <td><b><i>{{product.price}}</i></b></td>
+        </tr><tr>
+            <td><b>Image:</b></td>
+            <td><img src="{{product.imgUrl}}" class="imgView"></td>
+        </tr><tr>
+            <td><b>Image Url:</b></td>
+            <td>{{product.imgUrl}}</td>
+        </tr>
+    </table>
+    <form (ngSubmit)="onSubmit()">
+    <button type="sumbit" class="btn btn-secondary"><i class="fa fa-hand-o-left" style="font-size:70px; position: relative;"></i></button>
+    </form>   
+        
+    
+
+</div>

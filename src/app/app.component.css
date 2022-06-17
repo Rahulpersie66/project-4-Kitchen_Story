@@ -1,0 +1,26 @@
+
+.navbar{
+    background-color:black;
+}
+
+
+.form-control{
+    border-radius: 3px;
+    width:100%;
+    margin-top: 0px;
+    position: relative;
+    margin-right:1% ;
+}
+
+.search-icon{
+    position: relative;
+
+    margin-right: .1%;
+    color:burlywood;
+}
+
+.shop{
+    position: relative;
+
+    margin-right: 0%;
+}

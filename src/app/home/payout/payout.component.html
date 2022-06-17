@@ -1,0 +1,37 @@
+<p>payout works!</p>
+<div class="container" style="color:black">
+    <form (ngSubmit)="onSubmit()">
+        <div class="col-lg-6">
+            <div class="form-group mb-4">
+        <label>
+            Enter Card Number
+        </label>
+        <input type="number" name="cardNumber" [(ngModel)]="order.cardNumber">
+        </div>
+            </div>
+
+        <div class="col-lg-6">
+            <div class="form-group mb-4">
+        <label>
+            Exp month/year
+        </label>
+        <input type="text">
+        </div>
+            </div>
+
+        <div class="col-lg-6">
+            <div class="form-group mb-4">
+        <label>
+            CVV 
+        </label>
+            <input type="number">
+        </div>
+            </div>
+
+        <div class="col-lg-6">
+            <div class="form-group mb-4">
+                <button type="submit" class="btn btn-secondary">Payment</button>
+       </div>
+        </div>
+    </form>
+</div>

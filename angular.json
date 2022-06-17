@@ -27,9 +27,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../KitchenStoryFrontend/node_modules/font-awesome/css/font-awesome.css" 
             ],
-            "scripts": []
+            "scripts": ["../KitchenStoryFrontend/node_modules/font-awesome/css/font-awesome.css" ]
           },
           "configurations": {
             "production": {

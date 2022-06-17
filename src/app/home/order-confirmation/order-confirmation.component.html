@@ -1,0 +1,38 @@
+<div class="conatiner">
+    <h3>Thank you for purchasing at the KitchenStory.</h3>
+    <h5>Your order has been succesfully placed.</h5>
+    <h6>Details of Succesful Order placed-</h6>
+
+    <div class="container">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <td>Product</td>
+                    <td>Quantity</td>
+                    <td>Price (₹)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pro of cartProduct">
+                    <td>{{pro.prodName}}</td>
+                    <td>{{pro.quantity}}</td>
+                    <td>₹{{pro.price}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td><b>{{grandTotal}}</b></td>
+                </tr>
+                <tr>
+                    <td colspan="2">includes CGST (7%) + SGST (7%)</td>
+                    <td><b>₹{{alltotal - grandTotal}}</b></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Payment Made (₹)</td>
+                    <td><b>₹{{alltotal}}</b></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary  ml-1"  routerLink="/home">More Shop</button>
+    </div>
+    
+</div>

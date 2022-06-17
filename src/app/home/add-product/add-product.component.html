@@ -1,0 +1,45 @@
+<p>add-product works!</p>
+
+<div class="col-md-6 offset-md-3">
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Product Name:</label>
+            <input type="text" class="form-control" id="prodName" [(ngModel)]="product.prodName" name="prodName">
+        </div>
+        <div class="form-group">
+            <label>Vendor Name:</label>
+            <input type="text" class="form-control" id="vendorName" [(ngModel)]="product.vendorName" name="vendorName">
+        </div>
+        
+        <div class="form-group">
+            <label>Price (₹):</label>
+            <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+        </div>
+
+        <div class="form-group">
+            <label>Details:</label>
+            <input type="text" class="form-control" id="prodDetail" [(ngModel)]="product.prodDetail" name="prodDetail">
+        </div>
+        
+        <div class="form-group">
+            <label>Type:</label>
+            <input type="text" class="form-control" id="type" [(ngModel)]="product.type" name="type">
+        </div>
+
+        <div class="form-group">
+            <!-- <label>Img URL:</label> -->
+            <!-- <input type="file" class="form-control"  [(ngModel)]="current" (change)="onFileSelected($event)" > -->
+        </div>
+
+        <div class="form-group">
+            <label>Image Url:</label>
+            <input type="text" class="form-control" id="imgUrl" [(ngModel)]="product.imgUrl" name="imgUrl">
+        </div>
+        <br>
+        <button class="btn btn-outline-secondary " type="submit">
+            Add Product
+        </button>  
+        <button class="btn btn-outline-primary mx-3" routerLink="/adminViewUpdateProduct">Back</button> 
+    </form>
+</div>
